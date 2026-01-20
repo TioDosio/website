@@ -52,27 +52,27 @@ const projects: Project[] = [
     link: "https://fenix.tecnico.ulisboa.pt/cursos/meec21/dissertacao/1691203502345268",
     github: "#",
     size: "medium",
-    tags: ["Trajectory Prediction", "Human-Robot Interaction", "Transformers", "Linear Regression"]
+    tags: ["Python", "Trajectory Prediction", "Human-Robot Interaction", "Robotics", "Computer Vision"]
   },
   {
     id: 2,
     title: "Mask Detection Machine Learning Model",
-    description: "As an Image-and-Speech-Recognition-Project, a multimodal AI application that integrates computer vision to detect face mask usage in real time. Implemented a face-mask classifier capable of distinguishing between “with mask”, “without mask”, and “incorrect mask” directly from camera input. The project demonstrates practical experience with deep learning models and real-time image processing, as well as structuring a production-like Python project with clear modules for data, models, and application logic.",
+    description: "As an Image-and-Speech-Recognition-Project, a multimodal AI application that integrates computer vision to detect face mask usage in real time. Implemented a face-mask classifier capable of distinguishing between “with mask”, “without mask”, and “incorrect mask” directly from camera input.",
     date: "Nov, 2024",
     link: "https://github.com/TioDosio/Image-and-Speech-Recognition-Project",
     github: "https://github.com/TioDosio/Image-and-Speech-Recognition-Project",
     size: "medium",
-    tags: ["Computer Vision", "Deep Learning", "Python", "Real-Time Processing"]
+    tags: ["Python", "Computer Vision", "Deep Learning", "Real-Time Processing", "Keras", "OpenCV", "Training Model"]
   },
   {
     id: 3,
     title: "Voice and Word Recogniser Security System",
     description: "This project is a voice and word recognizer developed for the “Audio Signal Analysis and Speech Recognition” course. It analyzes audio signals, extracts speech features, and recognizes specific words or speakers to act as a security mechanism for accessing a protected platform.",
     date: "Nov, 2024",
-    link: "#",
-    github: "#",
+    link: "https://github.com/ariannapierini/Audio-signal-analysis-and-speech-recognition-PROJECT",
+    github: "https://github.com/ariannapierini/Audio-signal-analysis-and-speech-recognition-PROJECT",
     size: "medium",
-    tags: ["Speech Recognition", "Audio Signal Analysis", "Security Systems", "Python"]
+    tags: ["Python", "Speech Recognition", "Audio Signal Analysis", "Security Systems"]
   },
   {
     id: 4,
@@ -80,9 +80,9 @@ const projects: Project[] = [
     description: "This project is a systems programming assignment implementing a distributed, multi‑process variation of the classic snake game, where lizards roam a field, eat cockroaches, and are attacked by wasps. The game is composed of several independent clients and a central server that coordinate over TCP using ZeroMQ.",
     date: "Jan, 2024",
     link: "https://github.com/TioDosio/PSis",
-    github: "#",
+    github: "https://github.com/TioDosio/PSis",
     size: "medium",
-    tags: ["Systems Programming", "Distributed Systems", "ZeroMQ", "TCP"]
+    tags: ["C", "Systems Programming", "Distributed Systems", "ZeroMQ", "TCP"]
   },
   {
     id: 5,
@@ -90,9 +90,9 @@ const projects: Project[] = [
     description: "Travelling Salesman Problem (TSP) simulator based on Ant Colony Optimization (ACO), designed as a course project for Object Oriented Programming at IST. The system is implemented in Java with an emphasis on clean object-oriented design, UML-driven architecture, and discrete stochastic simulation of ant behavior on weighted graphs.",
     date: "May 21, 2023",
     link: "https://github.com/ErreEne/POO-project",
-    github: "#",
+    github: "https://github.com/ErreEne/POO-project",
     size: "medium",
-    tags: ["Ant Colony Optimization", "TSP", "Java", "Object-Oriented Design"]
+    tags: ["Java", "Programming", "Object-Oriented Design"]
   },
 ];
 
@@ -104,7 +104,7 @@ const workExperience: WorkExperience[] = [
     startDate: "2024",
     endDate: "2025",
     description: `Spearheaded the development and optimization of extensible time series feature extraction and selection modules, reducing training pipeline maintenance effort by approximately 30%. Devised and implemented feature engineering strategies that boosted model accuracy by around 5% and improved scalability for future model iterations. Collaborated with distributed, cross-functional teams to enable rapid prototyping and deployment, demonstrating strong remote communication and project management skills.`,
-    skills: ["Time Series Analysis", "Feature Engineering", "Python", "Remote Collaboration"]
+    skills: ["Python", "Machine Learning", "Time Series Data Analysis", "Feature Engineering",  "Pipeline Optimization", "Model Deployment", "Pytorch", "Numpy", "Pandas"]
   },
   {
     id: 2,
@@ -113,7 +113,7 @@ const workExperience: WorkExperience[] = [
     startDate: "09/2021",
     endDate: "06/2024",
     description: `Designed and delivered curricula for five concurrent classes (6–10 students each), from entry-level programming to advanced Python and robotics. Mentored students through full project lifecycles, achieving a 100% project completion rate and building solid problem-solving skills. Created hands-on, creative modules to increase engagement and foster innovation while balancing teaching duties with demanding academic work.`,
-    skills: ["Python", "Robotics", "Teaching", "Mentoring"]
+    skills: ["Python", "JavaScript", "HTML/CSS", "Programming", "Robotics", "Teaching", "Mentoring"]
   }
 ];
 
@@ -241,7 +241,7 @@ export default function Home() {
           <div className="mb-16 fade-in-up fade-in-up-1">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Projects</h2>
             <p className="text-muted-foreground text-lg">
-              Some of the projects are from work and some are on my own time.
+              Some of the projects were done independently, while others were collaborative efforts.
             </p>
           </div>
 
@@ -394,9 +394,9 @@ export default function Home() {
         <div className="container">
           <div className="mb-16 fade-in-up fade-in-up-1">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Skills</h2>
-            <p className="text-muted-foreground text-lg">
+            {/*<p className="text-muted-foreground text-lg">
               A comprehensive list of my technical and soft skills.
-            </p>
+            </p>*/}
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
@@ -491,7 +491,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-primary/20 py-8 bg-background/50">
         <div className="container text-center text-muted-foreground text-sm">
-          <p>© 2026 André Teodósio. All rights reserved.</p>
+          <p>© 2026 André Teodósio. All Rights Reserved.</p>
         </div>
       </footer>
     </div>
