@@ -99,6 +99,15 @@ const projects: Project[] = [
 const workExperience: WorkExperience[] = [
   {
     id: 1,
+    company: "Dustin",
+    position: "Operations Technician",
+    startDate: "2026",
+    endDate: "Present",
+    description: `Executed secure data erasure protocols on SSDs and HDDs across high-volume IT hardware batches, ensuring full compliance with data protection standards. Diagnosed and classified damaged hardware components, maintaining accurate documentation for repair, RMA, and disposal workflows while minimizing processing bottlenecks. Collaborated with development team to optimize warehouse management system functionality, delivering actionable process feedback that accelerated system deployment and improved operational reliability by streamlining intake-to-disposal workflows.`,
+    skills: ["Python", "Machine Learning", "Time Series Data Analysis", "Feature Engineering",  "Pipeline Optimization", "Model Deployment", "Pytorch", "Numpy", "Pandas"] 
+  },
+  {
+    id: 2,
     company: "Maven Pet",
     position: "Machine Learning Engineer Intern",
     startDate: "2024",
@@ -107,7 +116,7 @@ const workExperience: WorkExperience[] = [
     skills: ["Python", "Machine Learning", "Time Series Data Analysis", "Feature Engineering",  "Pipeline Optimization", "Model Deployment", "Pytorch", "Numpy", "Pandas"]
   },
   {
-    id: 2,
+    id: 3,
     company: "Sharkcoders",
     position: "Programming and Robotics Teacher",
     startDate: "09/2021",
