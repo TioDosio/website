@@ -104,7 +104,7 @@ const workExperience: WorkExperience[] = [
     startDate: "2026",
     endDate: "Present",
     description: `Executed secure data erasure protocols on SSDs and HDDs across high-volume IT hardware batches, ensuring full compliance with data protection standards. Diagnosed and classified damaged hardware components, maintaining accurate documentation for repair, RMA, and disposal workflows while minimizing processing bottlenecks. Collaborated with development team to optimize warehouse management system functionality, delivering actionable process feedback that accelerated system deployment and improved operational reliability by streamlining intake-to-disposal workflows.`,
-    skills: ["Python", "Machine Learning", "Time Series Data Analysis", "Feature Engineering",  "Pipeline Optimization", "Model Deployment", "Pytorch", "Numpy", "Pandas"] 
+    skills: ["Secure Data Erasure", "IT Hardware Diagnostics", "Process Optimization", "Workflow Design", "Warehouse Management Systems", "Cross-Functional Collaboration"]  
   },
   {
     id: 2,
