@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin, ExternalLink, Eye } from "lucide-react";
-import { useState } from "react";
+import { Mail, Github, Linkedin } from "lucide-react";
 
 /**
  * Professional Portfolio - Dark Mode with Neon Green Accents
@@ -16,10 +15,8 @@ interface Project {
   title: string;
   description: string;
   date: string;
-  //views: string;
   tags?: string[];
   link?: string;
-  github?: string;
   size?: "small" | "medium" | "large"; // For masonry layout
 }
 
@@ -50,7 +47,6 @@ const projects: Project[] = [
     description: "This study compares simple and complex trajectory prediction models for human-robot interaction, focusing on user perception and computational efficiency in real-time scenarios.",
     date: "Dec, 2025",
     link: "https://fenix.tecnico.ulisboa.pt/cursos/meec21/dissertacao/1691203502345268",
-    github: "#",
     size: "medium",
     tags: ["Python", "Trajectory Prediction", "Human-Robot Interaction", "Robotics", "Computer Vision"]
   },
@@ -60,7 +56,6 @@ const projects: Project[] = [
     description: "As an Image-and-Speech-Recognition-Project, a multimodal AI application that integrates computer vision to detect face mask usage in real time. Implemented a face-mask classifier capable of distinguishing between “with mask”, “without mask”, and “incorrect mask” directly from camera input.",
     date: "Nov, 2024",
     link: "https://github.com/TioDosio/Image-and-Speech-Recognition-Project",
-    github: "https://github.com/TioDosio/Image-and-Speech-Recognition-Project",
     size: "medium",
     tags: ["Python", "Computer Vision", "Deep Learning", "Real-Time Processing", "Keras", "OpenCV", "Training Model"]
   },
@@ -70,7 +65,6 @@ const projects: Project[] = [
     description: "This project is a voice and word recognizer developed for the “Audio Signal Analysis and Speech Recognition” course. It analyzes audio signals, extracts speech features, and recognizes specific words or speakers to act as a security mechanism for accessing a protected platform.",
     date: "Nov, 2024",
     link: "https://github.com/ariannapierini/Audio-signal-analysis-and-speech-recognition-PROJECT",
-    github: "https://github.com/ariannapierini/Audio-signal-analysis-and-speech-recognition-PROJECT",
     size: "medium",
     tags: ["Python", "Speech Recognition", "Audio Signal Analysis", "Security Systems"]
   },
@@ -80,7 +74,6 @@ const projects: Project[] = [
     description: "This project is a systems programming assignment implementing a distributed, multi‑process variation of the classic snake game, where lizards roam a field, eat cockroaches, and are attacked by wasps. The game is composed of several independent clients and a central server that coordinate over TCP using ZeroMQ.",
     date: "Jan, 2024",
     link: "https://github.com/TioDosio/PSis",
-    github: "https://github.com/TioDosio/PSis",
     size: "medium",
     tags: ["C", "Systems Programming", "Distributed Systems", "ZeroMQ", "TCP"]
   },
@@ -90,7 +83,6 @@ const projects: Project[] = [
     description: "Travelling Salesman Problem (TSP) simulator based on Ant Colony Optimization (ACO), designed as a course project for Object Oriented Programming at IST. The system is implemented in Java with an emphasis on clean object-oriented design, UML-driven architecture, and discrete stochastic simulation of ant behavior on weighted graphs.",
     date: "May 21, 2023",
     link: "https://github.com/ErreEne/POO-project",
-    github: "https://github.com/ErreEne/POO-project",
     size: "medium",
     tags: ["Java", "Programming", "Object-Oriented Design"]
   },
@@ -163,10 +155,7 @@ const skills = {
 };
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState<string>("home");
-
   const scrollToSection = (sectionId: string) => {
-    setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -267,15 +256,11 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="project-card card-hover group h-full p-6 rounded-sm flex flex-col justify-between overflow-hidden block"
                 >
-                  {/* Header with date and views */}
+                  {/* Header with date */}
                   <div className="flex justify-between items-start mb-4">
                     <span className="text-xs text-muted-foreground font-mono">
                       {project.date}
                     </span>
-                    {/* <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                      <Eye className="w-3 h-3" />
-                      <span>{project.views}</span>
-                    </div> */}
                   </div>
 
                   {/* Content */}
