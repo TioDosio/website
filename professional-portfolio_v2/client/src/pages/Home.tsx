@@ -99,15 +99,24 @@ const projects: Project[] = [
 const workExperience: WorkExperience[] = [
   {
     id: 1,
+    company: "ON2IT",
+    position: "Junior SOC Specialist",
+    startDate: "2026",
+    endDate: "Present",
+    description: `Monitor, analyze, and respond to security events and alerts across client environments to ensure continuous protection. Investigate potential threats, triage incidents, and collaborate with team members to execute effective mitigation strategies. Apply analytical problem-solving and engineering principles to support daily SOC operations`,
+    skills: ["SIEM Monitoring", "Security Alert Triage", "Incident Response", "Threat Detection", "Log Analysis", "Network Security"]
+  },
+  {
+    id: 2,
     company: "Dustin",
     position: "Operations Technician",
     startDate: "2026",
-    endDate: "Present",
+    endDate: "2026",
     description: `Executed secure data erasure protocols on SSDs and HDDs across high-volume IT hardware batches, ensuring full compliance with data protection standards. Diagnosed and classified damaged hardware components, maintaining accurate documentation for repair, RMA, and disposal workflows while minimizing processing bottlenecks. Collaborated with development team to optimize warehouse management system functionality, delivering actionable process feedback that accelerated system deployment and improved operational reliability by streamlining intake-to-disposal workflows.`,
     skills: ["Secure Data Erasure", "IT Hardware Diagnostics", "Process Optimization", "Workflow Design", "Warehouse Management Systems", "Cross-Functional Collaboration"]  
   },
   {
-    id: 2,
+    id: 3,
     company: "Maven Pet",
     position: "Machine Learning Engineer Intern",
     startDate: "2024",
@@ -116,11 +125,11 @@ const workExperience: WorkExperience[] = [
     skills: ["Python", "Machine Learning", "Time Series Data Analysis", "Feature Engineering",  "Pipeline Optimization", "Model Deployment", "Pytorch", "Numpy", "Pandas"]
   },
   {
-    id: 3,
+    id: 4,
     company: "Sharkcoders",
     position: "Programming and Robotics Teacher",
-    startDate: "09/2021",
-    endDate: "06/2024",
+    startDate: "2021",
+    endDate: "2024",
     description: `Designed and delivered curricula for five concurrent classes (6–10 students each), from entry-level programming to advanced Python and robotics. Mentored students through full project lifecycles, achieving a 100% project completion rate and building solid problem-solving skills. Created hands-on, creative modules to increase engagement and foster innovation while balancing teaching duties with demanding academic work.`,
     skills: ["Python", "JavaScript", "HTML/CSS", "Programming", "Robotics", "Teaching", "Mentoring"]
   }
@@ -172,10 +181,10 @@ const certificates: Certificate[] = [
 
 // Add a new Skills section
 const skills = {
-  programmingLanguages: ["Python", "C/C++", "MATLAB", "Java", "JavaScript"],
+  programmingLanguages: ["Python", "C/C++"],
   tools: ["Git", "ROS", "Linux", "Docker", "SQL"],
-  dataAndMachineLearning: ["Keras", "PyTorch", "Scikit-learn", "NumPy", "Pandas", "End-to-end ML pipeline development"],
-  webTechnologies: ["HTML", "CSS", "JavaScript"],
+  dataAndMachineLearning: ["Pandas", "NumPy", "Scikit-learn", "PyTorch", "OpenCV"],
+  cybersecurity: ["Network Security", "SIEM Tools", "Incident Response", "Vulnerability Assessment"],
   softSkills: ["Communication", "Stakeholder Engagement", "Analytical Leadership", "Creative Problem-Solving", "Reliability", "Cross-Cultural Collaboration"]
 };
 
@@ -449,8 +458,18 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Soft Skills */}
+            {/* Cybersecurity */}
             <div className="fade-in-up fade-in-up-5">
+              <h3 className="text-2xl font-bold mb-4 text-primary">Cybersecurity</h3>
+              <ul className="list-disc list-inside text-muted-foreground">
+                {skills.cybersecurity.map((skill, index) => (
+                  <li key={index}>{skill}</li>
+                ))}
+              </ul>
+            </div>  
+
+            {/* Soft Skills */}
+            <div className="fade-in-up fade-in-up-6">
               <h3 className="text-2xl font-bold mb-4 text-primary">Soft Skills</h3>
               <ul className="list-disc list-inside text-muted-foreground">
                 {skills.softSkills.map((skill, index) => (
