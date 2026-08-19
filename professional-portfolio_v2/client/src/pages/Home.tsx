@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Award, ExternalLink, Mail, Github, Linkedin } from "lucide-react";
 
 /**
  * Professional Portfolio - Dark Mode with Neon Green Accents
@@ -37,6 +37,14 @@ interface Education {
   field: string;
   graduationDate: string;
   details?: string;
+}
+
+interface Certificate {
+  id: number;
+  name: string;
+  issuer: string;
+  date: string;
+  link?: string;
 }
 
 // Added tags to each project to highlight skills gained
@@ -145,6 +153,8 @@ const education: Education[] = [
   }
 ];
 
+const certificates: Certificate[] = [];
+
 // Add a new Skills section
 const skills = {
   programmingLanguages: ["Python", "C/C++", "MATLAB", "Java", "JavaScript"],
@@ -191,7 +201,7 @@ export default function Home() {
         <div className="container py-4 flex items-center justify-between">
           <div className="text-xl font-bold text-primary">{">"}</div>
           <div className="flex gap-8">
-            {["Projects", "Experience", "Skills", "Contact"].map((item) => (
+            {["Projects", "Experience", "Skills", "Certificates", "Contact"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -212,7 +222,7 @@ export default function Home() {
               Hi, I'm <span className="text-primary">André Teodósio</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Junior AI Engineer and Software Developer based in Nijmegen, Netherlands. I specialize in scalable machine learning, software, robotics and computer vision.
+              Junior SOC Specialist based in the Netherlands.
             </p>
             <div className="flex gap-4">
               <Button
@@ -434,6 +444,60 @@ export default function Home() {
               </ul>
             </div>
           </div>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* Certificates Section */}
+      <section id="certificates" className="py-20 md:py-28">
+        <div className="container">
+          <div className="mb-16 fade-in-up fade-in-up-1">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Certificates</h2>
+            <p className="text-muted-foreground text-lg">
+              Professional credentials and continuing education.
+            </p>
+          </div>
+
+          {certificates.length > 0 ? (
+            <div className="grid gap-6 md:grid-cols-2">
+              {certificates.map((certificate, index) => (
+                <div
+                  key={certificate.id}
+                  className={`project-card card-hover p-6 rounded-sm fade-in-up fade-in-up-${(index % 5) + 1}`}
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <Award className="w-6 h-6 shrink-0 text-primary" aria-hidden="true" />
+                    <span className="text-xs text-muted-foreground font-mono whitespace-nowrap">
+                      {certificate.date}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold mt-6 mb-2 text-foreground">
+                    {certificate.name}
+                  </h3>
+                  <p className="text-muted-foreground">{certificate.issuer}</p>
+                  {certificate.link && (
+                    <a
+                      href={certificate.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 mt-6 text-sm text-primary font-bold hover:underline"
+                    >
+                      Verify certificate
+                      <ExternalLink className="w-4 h-4" aria-hidden="true" />
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="border border-primary/30 p-8 rounded-sm text-center fade-in-up fade-in-up-2">
+              <Award className="w-8 h-8 mx-auto mb-4 text-primary" aria-hidden="true" />
+              <p className="text-muted-foreground">
+                Certificates and verification links will appear here soon.
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
