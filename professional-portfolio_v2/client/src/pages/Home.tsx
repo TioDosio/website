@@ -153,7 +153,22 @@ const education: Education[] = [
   }
 ];
 
-const certificates: Certificate[] = [];
+const certificates: Certificate[] = [
+  {
+    id: 1,
+    name: "Cisco Certified Network Associate (CCNA)",
+    issuer: "Cisco",
+    date: "2026",
+    link: "https://www.credly.com/badges/b07aded1-3787-4743-b66b-0fd32e936584/linked_in_profile",
+  },
+    {
+      id: 2,
+    name: "Google Cybersecurity",
+    issuer: "Google",
+    date: "2026",
+    link: "https://www.coursera.org/account/accomplishments/specialization/9LS233MFFLO4",
+  },
+];
 
 // Add a new Skills section
 const skills = {
